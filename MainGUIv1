@@ -6,13 +6,29 @@ NotificationBindable.OnInvoke = callback
 --
 game.StarterGui:SetCore("SendNotification",  {
  Title = "AdoptLock";
- Text = "I Kidnap Orphans";
+ Text = "Adopt Some Bitches";
  Icon = "";
  Duration = 9999999999;
- Button1 = "Cock1";
- Button2 = "Cock2";
+ Button1 = "BITCHES";
+ Button2 = "BITCHED";
  Callback = NotificationBindable;
 })
+
+-- // Toggle
+local hotkey = ";" -- toggle key
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+mouse.KeyDown:Connect(function(key)
+if key == hotkey then
+if getgenv().ValiantAimHacks.SilentAimEnabled == true then
+ getgenv().ValiantAimHacks.SilentAimEnabled = false
+else
+getgenv().ValiantAimHacks.SilentAimEnabled = true
+end
+end
+end)
 
 -- // Services
 local Players = game:GetService("Players")
